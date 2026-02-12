@@ -24,8 +24,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Debug environment
+        run: |
+          echo "CLOUDFLARE_API_TOKEN exists: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}"
+          echo "CLOUDFLARE_ACCOUNT_ID exists: ${{ secrets.CLOUDFLARE_ACCOUNT_ID != '' }}"
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: deploy --no-bundle
+        run: npx wrangler deploy --no-bundle
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
