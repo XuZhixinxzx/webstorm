@@ -1,0 +1,10 @@
+{
+  "name": "cloudflare-pages-static-site",
+  "type": "cloudflare-pages",
+  "accountId": "e7b2a2e769c87990bea3fb2730834107",
+  "compatibilityFlags": ["nodejs_compat"],
+  "vars": {
+    "MONGODB_URI": "mongodb+srv://1159519953_db_user:xuzixin98766@cluster0.zwqghok.mongodb.net/?appName=Cluster0",
+    "JWT_SECRET": "dynamic-site-jwt-secret-key-2024"
+  }
+}
