@@ -1,0 +1,22 @@
+{
+  "name": "my-dynamic-site",
+  "version": "1.0.0",
+  "description": "动态网站项目",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "deploy:worker": "wrangler deploy",
+    "dev:worker": "wrangler dev"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "type": "module"
+}

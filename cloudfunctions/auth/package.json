@@ -1,0 +1,7 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "dependencies": {
+    "tcb-admin-node": "latest"
+  }
+}

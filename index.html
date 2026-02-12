@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的动态网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 欢迎访问我的动态网站</h1>
+        <p>这是一个使用 Node.js + Express 部署的动态网站</p>
+        
+        <!-- 用户信息显示 -->
+        <div id="user-info" class="user-info" style="display: none;">
+            <p>👤 欢迎回来，<span id="username-display"></span>！</p>
+            <button onclick="logout()" class="btn-secondary">退出登录</button>
+        </div>
+
+        <!-- 登录/注册表单 -->
+        <div id="auth-forms" class="auth-forms">
+            <!-- 登录表单 -->
+            <div id="login-form" class="auth-form">
+                <h3>🔐 用户登录</h3>
+                <input type="text" id="login-username" placeholder="用户名">
+                <input type="password" id="login-password" placeholder="密码">
+                <button onclick="login()">登录</button>
+                <p>还没有账号？<a href="#" onclick="showRegister()">注册</a></p>
+                <p id="login-error" class="error"></p>
+            </div>
+
+            <!-- 注册表单 -->
+            <div id="register-form" class="auth-form" style="display: none;">
+                <h3>📝 用户注册</h3>
+                <input type="text" id="reg-username" placeholder="用户名">
+                <input type="email" id="reg-email" placeholder="邮箱">
+                <input type="password" id="reg-password" placeholder="密码">
+                <button onclick="register()">注册</button>
+                <p>已有账号？<a href="#" onclick="showLogin()">登录</a></p>
+                <p id="register-error" class="error"></p>
+            </div>
+        </div>
+
+        <!-- 网站信息 -->
+        <div class="info">
+            <p>🌐 访问量: <span id="visitor-count">加载中...</span></p>
+            <p>🕐 当前时间: <span id="current-time"></span></p>
+            <p>📡 服务器状态: <span id="server-status">检查中...</span></p>
+        </div>
+
+        <!-- 交互功能 -->
+        <div class="features">
+            <button onclick="showMessage()">随机消息</button>
+            <button onclick="fetchMessages()" class="btn-secondary">查看留言</button>
+        </div>
+        <p id="message"></p>
+
+        <!-- 留言板 -->
+        <div id="message-board" class="message-board" style="display: none;">
+            <h3>📋 留言板</h3>
+            <textarea id="new-message" placeholder="输入留言..."></textarea>
+            <button onclick="submitMessage()">提交留言</button>
+            <div id="messages-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

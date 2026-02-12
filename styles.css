@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.info p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info span {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.features {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+#message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #667eea;
+    min-height: 30px;
+    margin-top: 20px;
+}
+
+/* 用户认证表单样式 */
+.auth-forms {
+    margin: 20px 0;
+}
+
+.auth-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.auth-form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.auth-form p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.auth-form a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #e74c3c !important;
+    font-size: 12px !important;
+}
+
+.success {
+    color: #27ae60 !important;
+}
+
+/* 用户信息样式 */
+.user-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.user-info p {
+    color: white;
+}
+
+.user-info button {
+    margin-top: 10px;
+    background: white;
+    color: #667eea;
+}
+
+/* 留言板样式 */
+.message-board {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.message-board h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.message-board textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 10px;
+}
+
+.message-board textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.message-item {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border-left: 3px solid #667eea;
+}
+
+.message-item strong {
+    color: #667eea;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .features {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
